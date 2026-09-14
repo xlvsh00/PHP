@@ -142,6 +142,11 @@ for ($i = 1; $i <= 10; $i++) {
 ?>
 <?php
 # Napisz pętlę do-while, która wykonuje się przynajmniej raz i wypisuje komunikat.
+        do {
+            echo "Komunikat" $licznik2;
+            $licznik++;
+        } while ($licznik2 < 3);
+        
 ?>
 <?php
 # Oblicz sumę liczb od 1 do 100 za pomocą pętli.
