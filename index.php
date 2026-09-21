@@ -1,3 +1,30 @@
+<?php
+# Ustaw ciasteczko przechowujące imię użytkownika na 7 dni.
+    setcookie("username", "Jakub", time() + (86400 * 7), "/");
+?>
+
+<?php
+# Sprawdź, czy ciasteczko username istnieje, a jeśli tak, wyświetl jego wartość.
+if (isset($_COOKIE["username"])) {
+    echo "Witaj, " . $_COOKIE["username"];
+}   
+?>
+
+<?php
+# Utwórz ciasteczko z preferowanym kolorem tła strony.
+    setcookie("preferred_color", "blue", time() + (86400 * 30), "/");
+?>
+
+<?php
+# Usunięcie ciasteczka session_id.
+    setcookie("session_id", "", time() - 3600, "/");
+?>
+
+<?php
+# Wyświetl wszystkie ciasteczka dostępne na stronie.
+    print_r($_COOKIE);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -235,4 +262,37 @@ function formatPrice($price) {
 function greetUser($name, $age) {
     return "Nazywam się $name i mam $age lat.";
 }
+?>
+
+<?php
+# Utwórz sesję i zapisz w niej dane użytkownika (ID, imię, email).
+session_start();
+$_SESSION["user_id"] = 123;
+$_SESSION["username"] = "Jakub";
+?>
+
+<?php
+# Sprawdź, czy sesja jest ustawiona, a jeśli tak, wyświetl dane użytkownika.
+    if (isset($_SESSION["username"])) {
+        echo "Zalogowany jako: " . $_SESSION["username"];
+    }
+?>
+
+<?php
+# Usunięcie konkretnej zmiennej sesji.
+    unset($_SESSION['username']);
+?>
+
+<?php
+# Wyloguj użytkownika poprzez zniszczenie sesji.
+    session_destroy();
+?>
+
+<?php
+# Zachowaj preferowany język użytkownika w sesji.   
+    $_SESSION['language'] = "PL";
+?>
+
+<?php
+
 ?>
