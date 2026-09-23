@@ -1,0 +1,32 @@
+<?php
+    class Person {
+        public $name;
+        public $age;
+        
+        public function __construct($name, $age) {
+            $this->name = $name;
+            $this->age = $age;
+            echo "Tworze człowieka ma na imię $name i ma $age lat.\n";
+        }
+    }    
+
+$person = new Person("Marek", 20);
+echo $person->name;
+?>
+<?php
+    class Wojownik {
+        public $miecz;
+        public $tarcza;
+
+        public function __constuct($miecz, $tarcza) 
+        $this->miecz = $miecz;
+        $this->tarcza = $tarcza;
+        echo "Tworzę wojownika ma miecz $miecz i ma tarcze $tarcza.\n";
+
+    }
+
+$wojownik = new Wojownik("Mieczysław 2000", "Smoka");
+echo get_class($wojownik);
+
+
+?>    
