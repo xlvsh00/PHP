@@ -1,0 +1,42 @@
+<?php
+    class Person {
+        public $name;
+        public $age;
+        
+        public function __construct($name, $age) {
+            $this->name = $name;
+            $this->age = $age;
+            echo "Tworze człowieka ma na imię $name i ma $age lat.\n";
+        }
+
+        public function greet() {
+            return "Witaj ";
+        }
+
+        public function setAge($age) {
+            return "Twój wiek został zmieniony";
+        }
+    }    
+
+$person = new Person("Marek ", 20);
+echo $person->name;
+$person = new Person("Anna ", 25);
+echo $person->name;
+$person = new Person("Jakub", 23);
+echo $person->greet();
+
+?>
+
+<?php
+    class Circle {
+        public $radius;
+
+        public function area() {
+            return 3.14 * $this->radius * $this->radius;
+        } 
+    
+    }
+    $circle = new Circle();
+    $circle->radius = 5;
+    
+    echo "Pole koła " . $circle->area();
