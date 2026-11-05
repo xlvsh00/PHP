@@ -1,0 +1,99 @@
+<?php
+
+    class Vehicle {
+        public $brand;
+
+    public function __construct($brand)
+    {
+        $this->brand = $brand;
+    }
+
+    public function move()
+    {
+        return "...";
+    }
+
+}
+
+    class Car extends Vehicle {
+        public $model;
+
+        public function __construct($brand, $model)
+      {
+          parent::__construct($brand);
+          $this->model = $model;
+      }
+
+      
+
+      public function move()
+      {
+          return "";
+      }
+    }
+
+    class Truck extends Vehicle {
+    public $color; 
+    
+    public function __construct($color) {
+        $this->color = $color;
+    }
+}
+
+    class Animal {
+        public $name;
+    
+        public function __construct($name) {
+            $this->name = $name;
+        }
+
+        public function eat() {
+            return "Zwierzę je";
+        } 
+    }
+
+    class Cat extends Animal {
+        public function eat() 
+        {
+            return "...";
+        }
+    
+    }
+    
+
+    class Dog extends Animal {
+        public function eat()
+        {
+            return "...";
+        }
+    
+    }
+
+    $cat = new Cat("Niuniuś");
+    $dog = new Dog("Sauron");
+    echo $cat->eat();
+    echo $dog->eat();
+
+
+    class Employee {
+        public $employee;
+        protected $salary
+
+        public function __construct($employee) {
+            $this->employee = $employee;
+        }
+    }
+
+    class Manager extends Employee {
+        public $name;
+
+        public function __construct($name, $salary) {
+            $this->name = $name;
+            $this->
+        }
+    }
+
+
+
+
+?>
